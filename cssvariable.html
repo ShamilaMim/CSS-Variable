@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable</title>
+
+    <style>
+        :root {
+            --background-color: rgb(150, 140, 140);
+            --div-background-color: yellow;
+            --display: inline-block;
+            --body-background-color: cornflowerblue;
+            --text-color: black;
+            --text-color1: white;
+            --text-allign: center;
+            --hover-color: black;
+            --margin-left: 100px;
+            --margin-top: 5px;
+            --text-align1: justify;
+            --margin: 10px;
+            --box-shadow: black;
+        }
+
+        body {
+            background-color: var(--body-background-color);
+
+        }
+
+        .intro {
+            width: 90vw;
+            height: auto;
+            margin: auto;
+        }
+
+        .main {
+            margin-left: var(--margin-left);
+        }
+
+        .common {
+            /* --div-background-color: blue; */
+            width: 200px;
+            height: 200px;
+            background-color: var(--div-background-color);
+            margin: 10px;
+            display: var(--display);
+            color: var(--text-color);
+            text-align: var(--text-allign);
+            position: relative;
+        }
+
+        .bt {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin: 10px;
+        }
+
+        .bt button {
+            margin: 4px;
+        }
+
+        h1 {
+            text-align: var(--text-allign);
+            color: var(--text-color1);
+        }
+
+        h2 {
+            top: 60px;
+            left: 60px;
+            position: absolute;
+        }
+
+        p {
+            text-align: var(--text-align1);
+            margin: var(--margin);
+            color: var(--text-color1);
+        }
+
+        h3 {
+            margin-top: 30px;
+            margin-left: 10px;
+            color: var(--text-color1);
+            text-align: center;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            margin-left: 86px;
+            margin-top: 10px;
+            border: 2px solid green;
+            background-color: lightyellow;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px var(--box-shadow);
+        }
+
+        #dark {
+            width: 50px;
+            height: 30px;
+            background-color: red;
+            border: 2px solid black;
+            border-radius: 8px;
+            color: white;
+        }
+
+        #dark:hover {
+            box-shadow: 2px 2px 4px var(--hover-color);
+        }
+
+        #light {
+            width: 50px;
+            height: 30px;
+            background-color: red;
+            border: 2px solid black;
+            border-radius: 8px;
+            color: white;
+        }
+
+        #light:hover {
+            box-shadow: 2px 2px 4px var(--hover-color);
+        }
+
+        #reset {
+            width: 50px;
+            height: 30px;
+            background-color: limegreen;
+            border: 2px solid black;
+            border-radius: 8px;
+            color: white;
+        }
+
+        #reset:hover {
+            box-shadow: 2px 2px 4px var(--hover-color);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="bt">
+        <button id="dark">Dark</button>
+        <button id="light">Light</button>
+        <button id="reset">Reset</button>
+    </div>
+
+    <div class="intro">
+        <h1>THE BOXE'S</h1>
+
+        <div class="main">
+            <div class="div1 common">
+                <h2>BOX</h2>
+            </div>
+
+            <div class="div2 common">
+                <h2>BOX1</h2>
+            </div>
+
+            <div class="div3 common">
+                <h2>BOX2</h2>
+            </div>
+
+            <div class="common">
+                <h2>BOX3</h2>
+            </div>
+
+            <div class="common">
+                <h2>BOX4</h2>
+            </div>
+        </div>
+
+        <p>A box (plural: boxes) is a container used for the storage or transportation of its contents. Most boxes have
+            flat, parallel, rectangular sides. Boxes can be very small (like a matchbox) or very large (like a shipping
+            box
+            for furniture), and can be used for a variety of purposes from functional to decorative.
+            Boxes may be made of a variety of materials, both durable, such as wood and metal; and non-durable, such as
+            corrugated fiberboard and paperboard. Corrugated metal boxes are commonly used as shipping containers.
+            Most commonly, boxes have flat, parallel, rectangular sides, making them rectangular prisms; but boxes may
+            also
+            have other shapes.
+            Boxes may be closed and shut with flaps, doors, or a separate lid. They can be secured shut with adhesives,
+            tapes, or more decorative or elaborately functional mechanisms, such as a catch, clasp or lock.
+        </p>
+
+        <h3>Image Of Boxe's</h3>
+
+        <img src="redbox.png" alt="">
+        <img src="yellowbox.png" alt="">
+        <img src="blackbox.png" alt="">
+        <img src="pinkbox.png" alt="">
+        <img src="brownbox.png" alt="">
+
+
+    </div>
+
+
+</body>
+
+<script>
+
+    document.getElementById("dark").addEventListener("click", function () {
+        document.documentElement.style.setProperty('--body-background-color', "black");
+        document.documentElement.style.setProperty('--div-background-color', "white");
+        document.documentElement.style.setProperty('--hover-color', "white");
+        document.documentElement.style.setProperty('--text-color1', "white");
+        document.documentElement.style.setProperty('--box-shadow', "white");
+    })
+
+    document.getElementById("light").addEventListener("click", function () {
+        document.documentElement.style.setProperty('--body-background-color', "white");
+        document.documentElement.style.setProperty('--div-background-color', "red");
+        document.documentElement.style.setProperty('--hover-color', "black");
+        document.documentElement.style.setProperty('--text-color1', "black");
+        document.documentElement.style.setProperty('--box-shadow', "black");
+    })
+
+    document.getElementById("reset").addEventListener("click", function () {
+        document.documentElement.style.setProperty('--body-background-color', "cornflowerblue");
+        document.documentElement.style.setProperty('--div-background-color', "yellow");
+        document.documentElement.style.setProperty('--hover-color', "black");
+        document.documentElement.style.setProperty('--box-shadow', "black");
+    })
+</script>
+
+</html>
